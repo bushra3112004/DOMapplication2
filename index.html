@@ -15,19 +15,20 @@ background-image: linear-gradient(101deg, #8df5c1 0%, #fdfa6e 100%);
         }
         .face-container{
             background-color: white;
-            width: 350px;
-            height: 250px;
+            width: 400px;
+            height: 400px;
             margin: 10px auto;
             display: flex;
             justify-content: center;
-            border-radius: 5px;
+            border-radius: 50%;
           box-shadow:2px 2px 5px 5px rgb(191, 205, 179);
 
         }
         
-        .happy-img{
+        .gender-img{
             size: 10px;
             margin: 10px auto;
+            border-radius: 50%;
         }
         .btn-container{
             display: flex;
@@ -47,17 +48,17 @@ background-image: linear-gradient(101deg, #8df5c1 0%, #fdfa6e 100%);
         .btn-toggle:hover{
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-        .btn-happy{
+        .btn-girl{
             background-color: orange;
         }
-        .btn-sad{
+        .btn-boy{
             background-color: gray;
         }
         @media screen and (max-width 600px){    
         .face-container {
             width: 80%;
         } 
-        .happy-img{
+        .gender-img{
             height: 150px;
         }
      
@@ -69,22 +70,22 @@ background-image: linear-gradient(101deg, #8df5c1 0%, #fdfa6e 100%);
 <body>
     <h1 class="app-title">Face Toggler</h1>
     <div class="face-container">
-    <img src="./images/happiness.png" class="happy-img" id="face"/></div>
+    <img src="./images/boy-and-girl.png" class="gender-img" id="face"/></div>
    
     <div class="btn-container">
-    <button class="btn-toggle btn-happy" onclick="turnhappy()">
-        Happy</button>
-    <button class="btn-toggle btn-sad" onclick="turnsad()">
-        sad</button>
+    <button class="btn-toggle btn-girl" onclick="turngirl()">
+        GIRL</button>
+    <button class="btn-toggle btn-boy" onclick="turnboy()">
+        BOY</button>
     </div>
     <script>
-  function turnhappy(){
+  function turngirl(){
     const faceElement = document.getElementById('face')
-    faceElement.src='./images/happiness.png';
+    faceElement.src='./images/girl.png';
   }
-  function turnsad(){
+  function turnboy(){
       const faceElement = document.getElementById('face');
-      faceElement.src = 'images/sad (1).png';
+      faceElement.src = 'images/boy.png';
   }
     </script>
 </body>
